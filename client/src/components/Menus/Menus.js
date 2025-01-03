@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { menu } from '../../Utills/menu.js';
 import { Link } from 'react-router-dom';
-
+import logo from '../../assets/logo.png';
 const Menus = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -12,7 +12,13 @@ const Menus = () => {
   return (
     <nav className='bg-blue-600 text-white px-4 py-3 fixed w-full top-0 z-50'>
       <div className='flex justify-between items-center'>
-        <h1 className='text-lg sm:text-xl font-bold'>My Portfolio</h1>
+        <div>
+          <img
+            src={logo}
+            alt='Logo'
+            className='h-8 w-16 sm:h-10 sm:w-20 sm:ml-14'
+          />
+        </div>
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className='sm:hidden text-xl focus:outline-none'>
