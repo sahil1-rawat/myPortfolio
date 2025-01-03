@@ -1,18 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Typewriter from 'typewriter-effect';
 import Profile from '../../assets/profile.jpg';
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import { links } from '../../Utills/links';
 
 const Home = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1500,
-    });
-  }, []);
-
   return (
     <div className='relative  min-w-[100vw] bg-white flex flex-col items-center justify-center text-center p-6 overflow-auto'>
       <div className=''>
