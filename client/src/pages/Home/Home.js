@@ -53,7 +53,10 @@ const Home = () => {
         </a>
         <button
           onClick={() => {
-            window.open('Docs/resume.pdf', '_blank');
+            window.open(
+              'https://drive.google.com/file/d/1Asu3Up1l6nfmWK6VLYFo7dLwLPgJEHa1/view?usp=drive_link',
+              '_blank'
+            );
           }}
           className='bg-[#30326e] text-white px-6 py-3 rounded-lg text-lg font-semibold transition duration-300 ease-in-out transform hover:bg-[#1d24df] hover:scale-105'>
           Resume
