@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { links } from '../../Utills/links';
 
 const Contact = () => {
+  const url = 'http://localhost:5000';
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -32,7 +33,7 @@ const Contact = () => {
         msg: formData.message,
       });
        */
-      const res = await fetch(`http://localhost:5000/api/v1/portfolio/msg`, {
+      const res = await fetch(`${url}/api/v1/portfolio/msg`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
