@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { links } from '../../Utills/links';
 
 const Contact = () => {
-  const url = "https://myportfolio-pzcv.onrender.com";
+  const url = "https://shailendra-portfolio.onrender.com";
   const [formData, setFormData] = useState({
     name: '',
     email: '',
