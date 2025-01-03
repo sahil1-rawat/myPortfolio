@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 import { links } from '../../Utills/links';
 
 const Contact = () => {
-  const url =
-    'https://shailendra-portfolio.onrender.com' | 'http://localhost:5000';
+  const url = 'http://localhost:5000';
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -28,12 +27,6 @@ const Contact = () => {
       return;
     }
     try {
-      /* const res = await axios.post('/api/v1/portfolio/msg', {
-        name: formData.name,
-        email: formData.email,
-        msg: formData.message,
-      });
-       */
       const res = await fetch(`${url}/api/v1/portfolio/msg`, {
         method: 'POST',
         headers: {
@@ -46,10 +39,10 @@ const Contact = () => {
         }),
       });
 
-      const data = await res.json();
+      console.log(res);
 
-      if (data) {
-        alert(data.message);
+      if (res.status === 200) {
+        alert('Message Sent');
         setFormData({ name: '', email: '', message: '' });
       } else {
         console.log('msg:', res.data.message);
